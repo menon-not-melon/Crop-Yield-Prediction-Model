@@ -6,24 +6,26 @@ This project utilizes a machine learning model to predict crop yields using a da
 ## Dataset
 The dataset file is named yield_df.csv, and it should include the following columns:
 
-Area: Geographical area (state or region).
-Item: Type of crop.
-Year: Year of the data entry.
-average_rain_fall_mm_per_year: Average rainfall (mm).
-pesticides_tonnes: Pesticide usage (tonnes).
-avg_temp: Average temperature (°C).
-hg/ha_yield: Yield in hg/ha (target variable).
-Requirements
+- Area: Geographical area (state or region).
+- Item: Type of crop.
+- Year: Year of the data entry.
+- average_rain_fall_mm_per_year: Average rainfall (mm).
+- pesticides_tonnes: Pesticide usage (tonnes).
+- avg_temp: Average temperature (°C).
+- hg/ha_yield: Yield in hg/ha (target variable).
+
+## Requirements
 This project requires the following libraries:
-'''
-Python (>=3.6)
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-Flask
-pickle
-'''
+- Python (>=3.6)
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
+- Flask
+- pickle
 
 To install the required packages, run:
+'''
+pip install -r requirements.txt
+'''
