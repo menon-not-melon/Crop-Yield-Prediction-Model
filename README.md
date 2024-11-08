@@ -29,3 +29,45 @@ To install the required packages, run:
 ```
 pip install -r requirements.txt
 ```
+
+## Installation
+1. Clone the repository:
+```
+git clone <repository_url>
+```
+2. Navigate to the project directory:
+```
+cd crop-yield-prediction
+```
+3. Place the dataset file ```(yield_df.csv)``` in the project directory.
+
+## Usage
+1. Preprocess the Data: 
+Run the preprocessing script to clean and prepare data for training. This script also handles missing values, outliers, and normalizes data.
+2. Train the Model: 
+Run the ```model.py``` script to train the ExtraTreesRegressor model on the dataset. This will save a trained model as a pickle file ```(model.pkl)```.
+```
+python model.py
+```
+3. Run the Web Application: Start the Flask app to use the web interface for prediction.
+```
+python app.py
+```
+
+## Model Training
+The model uses an ExtraTreesRegressor from the scikit-learn library. 
+Key preprocessing steps:
+1. Label Encoding: Applied to categorical columns.
+2. OneHot Encoding: Used for certain categorical features to improve model interpretability.
+3. Min-Max Scaling: Normalizes numerical features to a scale of 0 to 5.
+4. Outlier Removal: Using quantiles for specified features.
+
+### Application Structure
+- app.py: Main Flask application that provides web interface and API.
+- model.py: Contains code for data preprocessing, model training, and saving the model.
+- yield_df.csv: Dataset for training and prediction.
+- model.pkl: Saved model for predictions.
+- requirements.txt: List of required packages.
+
+## License
+This project is licensed under the MIT License.
